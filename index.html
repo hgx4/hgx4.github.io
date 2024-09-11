@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <link rel="icon" href="">
+    <style>
+        /* 全局样式 */
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #1d1d1f;
+            background-color: #f5f5f7;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.7em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            font-size: 1.3em;
+            color: #0070c9;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .About, .Music, .Movie,  .Book {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 900px;
+        }
+
+        .About h1, .Music h1, .Movie h1, .Book h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .About p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .tupian {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .tupian div {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .tupian img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .tupian img:hover {
+            transform: scale(1.05);
+        }
+
+        .tupian a {
+            color: #0070c9;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+
+        .tupian a:hover {
+            text-decoration: underline;
+        }
+
+        .Movie img {
+            display: block;
+            border-radius: 12px;
+            margin: 20px auto;
+            width: 70%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .Movie p, .Book p {
+            text-align: center;
+            font-size: 1.4em;
+            color: #0070c9;
+            margin-top: 20px;
+        }
+        .Animation h1 {
+            text-align: center;
+            margin: 200px;
+        }
+
+        .Animation img {
+            display: block;
+            width: 100%;
+            margin: 0;
+
+        }
+
+        .Book {
+            display: flex;
+            flex-direction: column;
+
+
+            margin: 100px auto;
+            width: 80%;
+        }
+
+        .Book div {
+            width: 50%;
+            margin: 0 auto;
+            padding: 50px auto;
+        }
+
+        .Book img {
+            display: block;
+            width: 100%;
+
+            padding: 100px 0;
+            margin: 50px auto;
+        }
+
+        .Book p {
+            margin: 50px 0;
+            text-align: center;
+            font-size: 2.7em;
+            line-height: 60px;
+            margin: 100px auto;
+
+        }
+        footer {
+
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .About, .Music, .Movie, .Book {
+        padding: 20px 10px;
+        margin: 10px auto;
+    }
+
+    .About h1, .Music h1, .Movie h1, .Book h1 {
+        font-size: 1.5em;
+    }
+
+    .About p {
+        font-size: 1em;
+    }
+
+    .tupian div {
+        width: 45%;
+    }
+
+    .Movie img {
+        width: 90%;
+    }
+
+    .Animation h1 {
+        margin: 50px;
+    }
+
+    .Book {
+        margin: 50px auto;
+        width: 90%;
+    }
+
+    .Book div {
+        width: 80%;
+    }
+
+    .Book img {
+        padding: 50px 0;
+        margin: 25px auto;
+    }
+
+    .Book p {
+        font-size: 2em;
+        line-height: 50px;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .About, .Music, .Movie, .Book {
+        padding: 10px;
+    }
+
+    .About h1, .Music h1, .Movie h1, .Book h1 {
+        font-size: 1.2em;
+    }
+
+    .About p {
+        font-size: 0.9em;
+    }
+
+    .tupian div {
+        width: 100%;
+    }
+
+    .Movie img {
+        width: 100%;
+    }
+
+    .Animation h1 {
+        margin: 20px;
+    }
+
+    .Book {
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    .Book div {
+        width: 100%;
+    }
+
+    .Book img {
+        padding: 20px 0;
+        margin: 10px auto;
+    }
+
+    .Book p {
+        font-size: 1.5em;
+        line-height: 40px;
+        margin: 20px auto;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#movie">Movie</a></li>
+                <li><a href="#animation">Animation</a></li>
+                <li><a href="#book">Book</a></li>
+                <li>
+                    <a href="https://v.douyin.com/CeiLWdpM/" target="_blank">
+                        <img src="https://img.zcool.cn/community/0151d65a61857ea80120121fc9d5ea.png@1280w_1l_2o_100sh.png"
+                            alt="抖音" width="25" height="25" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://space.bilibili.com/1495325953?spm_id_from=333.337.0.0" target="_blank">
+                        <img src="https://img.ixintu.com/upload/jpg/20210524/079ee72073488f25699e7da3d6aef8be_73267_800_800.jpg!con"
+                            alt="哔哩哔哩" width="25" height="25" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="About">
+            <h1>About Me</h1>
+            <p>
+                Hey there! Welcome to my personal little corner of the internet. This
+                is my website, built with every ounce of effort and sweat, piece by
+                piece. While it may still have some imperfections, I'm committed to
+                continuous learning and improvement. I'm a second-year university
+                student majoring in Electronic Information Science and Technology.
+                Since the summer after my first year, I've developed a deep interest
+                in computer science and have invested a lot of time in studying it.
+                Currently, I'm delving into HTML, CSS, and JavaScript, and this
+                website is a small project for me to test my learning progress. My
+                dream is to become an excellent programmer, especially a full-stack
+                engineer. I aspire to the digital nomad lifestyle, working freely
+                around the globe and exploring different cultures and ways of life. At
+                the same time, I hope to contribute my own efforts on platforms like
+                GitHub one day, engaging with more tech experts for mutual learning
+                and growth. Thank you for visiting!
+            </p>
+            <!-- 省略 About 部分内容 -->
+        </section>
+        <section class="Music" id="music">
+            <h1 style="text-align: center">Some songs and singers</h1>
+            <div class="tupian">
+                <div>
+                    <img src="images/QQ图片20240907170918.jpg" alt="夜曲" />
+                    <a href="https://www.kugou.com/song/79am89.html#j2i4n34" target="_blank">夜曲</a>
+                    <p>
+                        <a href="https://www.kugou.com/singer/info/3E0KCC3671E7/" target="_blank">周杰伦</a>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/7479cfea260314447323a66f7d2afc32.jpg" alt="陪你去流浪" />
+                    <a href="https://music.163.com/#/mv?id=10910895" target="_blank">陪你去流浪</a>
+                    <p>
+                        <a href="https://music.163.com/#/artist?id=5781" target="_blank">薛之谦</a>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/4e0d566411b35899a76dd5845a2ae5fe.jpg" alt="黑夜问白天" />
+                    <a href="https://music.163.com/#/mv?id=5779168" target="_blank">黑夜问白天</a>
+                    <p>
+                        <a href="https://music.163.com/#/artist?id=3684" target="_blank">林俊杰</a>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/0285dd44190a4c421b64c2047ed0a17d.jpg" alt="水星记" />
+                    <a href="https://music.163.com/#/song?id=441491828" target="_blank">水星记</a>
+                    <p>
+                        <a href="https://music.163.com/#/artist?id=2843" target="_blank">郭顶</a>
+                    </p>
+
+                </div>
+                <div>
+                    <img src="images/5f6d6e0d8a7b0603e5c9d02ec4195c55.jpg" alt="IV" />
+                    <a href="https://music.163.com/#/song?id=3947469" target="_blank">IV</a>
+                    <p>
+                        <a href="https://music.163.com/#/artist?id=88009" target="_blank">Athletics</a>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/88f84e09fba122f251d649195a04313a.jpg" alt="爱？" />
+                    <a href="https://music.163.com/#/song?id=1965902593" target="_blank">爱？</a>
+                    <p>
+                        <a href="https://music.163.com/#/artist?id=30950035" target="_blank">Seto</a>
+                    </p>
+                </div>
+                <!-- 省略 Music 部分内容 -->
+        </section>
+        <section class="Movie" id="movie">
+            <h1>最近非常喜欢的电影</h1>
+            <img src="images\p2909066221.webp" alt="电影走走停停">
+            <p><a href="https://v.qq.com/x/cover/mzc00200xoedhmq/d41000vub0r.html" target="_blank">走走停停</a></p>
+
+
+        </section>
+        <section class="Animation" id="animation">
+            <h1>最爱的国漫:<a
+                    href="https://v.qq.com/x/search/?q=%E7%94%BB%E6%B1%9F%E6%B9%96%E4%B9%8B%E4%B8%8D%E8%89%AF%E4%BA%BA"
+                    target="_blank">画江湖之不良人</a></h1>
+            <img src="images\p2891861605.jpg" alt="李星云">
+            <img src="images\p2891861613.jpg" alt="李星云">
+            <img src="images\p2891031635.jpg" alt="李星云">
+        </section>
+        <section class="Book" id="book">
+            <div>
+                <p><a href="https://book.douban.com/subject/5910656/" target="_blank">《我与地坛》</a>：命定的局限尽可永在，不屈的挑战却不可须臾或缺</p>
+                <img src="images\s34274221.jpg" alt="我与地坛">
+            </div>
+            <div>
+                <p><a href="https://book.douban.com/subject/20476928/" target="_blank">《病隙碎笔》</a>: 生命的意义本不在向外的寻取，而在向内的建立。</p>
+                <img src="images\s29358614.jpg" alt="病隙碎笔">
+            </div>
+
+        </section>
+        <!-- 
+     -->
+    </main>
+    <footer>
+        <p>© 2024 hgx-Personal Website. All rights reserved.</p>   
+        <p>Designed and developed by hgx.</p>
+    </footer>
+</body>
